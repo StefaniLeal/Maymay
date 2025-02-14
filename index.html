@@ -29,11 +29,11 @@
             if (opcao === '14/01/2025') {
                 document.getElementById('resultado').innerHTML = `
                     <div class="foto-container">
-                        <img src="https://files.fm/u/33f7y78dsa?k=42e24999" alt="Sua foto" class="foto">
+                        <img src="sua_foto.jpg" alt="Sua foto" class="foto">
                         <div class="fundo-branco"></div>
-                        <p class="mensagem" style="display: none;">Eu te amo ursinho, Feliz um mês</p>
+                        <p class="mensagem" style="display: none;">Eu te amo</p>
                     </div>
-                    <button class="botao" onclick="revelarFoto()">Aperte aqui</button>
+                    <button class="botao" onmouseover="revelarFoto()">Aperte aqui</button>
                 `;
             } else {
                 document.getElementById('resultado').innerHTML = 'Resposta incorreta!';
@@ -43,8 +43,6 @@
         function revelarFoto() {
             document.querySelector('.fundo-branco').style.display = 'none';
             document.querySelector('.mensagem').style.display = 'block';
-            setTimeout(function() {
-            }, 2000);
         }
     </script>
 </body>
