@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.foto-container {
+    position: relative;
+}
+
+.foto {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.fundo-branco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.botao {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #3e8e41;
+}
+
+.mensagem {
+    font-size: 24px;
+    color: #ff0000;
+    font-family: Arial;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Qual a data do nosso namoro?</h1>
+        <form>
+            <input type="radio" id="opcao1" name="opcao" value="01/01/2025">
+            <label for="opcao1">01/01/2025</label><br>
+            <input type="radio" id="opcao2" name="opcao" value="14/01/2025">
+            <label for="opcao2">14/01/2025</label><br>
+            <input type="radio" id="opcao3" name="opcao" value="21/01/2025">
+            <label for="opcao3">21/01/2025</label><br>
+            <input type="radio" id="opcao4" name="opcao" value="28/01/2025">
+            <label for="opcao4">28/01/2025</label><br>
+            <button type="button" onclick="verificarResposta()">Verificar</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function verificarResposta() {
+            var opcao = document.querySelector('input[name="opcao"]:checked').value;
+            if (opcao === '14/01/2025') {
+                document.getElementById('resultado').innerHTML = `
+                    <div class="foto-container">
+                        <img src="https://files.fm/u/33f7y78dsa?k=42e24999" alt="Sua foto" class="foto">
+                        <div class="fundo-branco"></div>
+                        <p class="mensagem" style="display: none;">Eu te amo ursinho, Feliz um mês</p>
+                    </div>
+                    <button class="botao" onclick="revelarFoto()">Aperte aqui</button>
+                `;
+            } else {
+                document.getElementById('resultado').innerHTML = 'Resposta incorreta!';
+            }
+        }
+
+        function revelarFoto() {
+            document.querySelector('.fundo-branco').style.display = 'none';
+            document.querySelector('.mensagem').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'pagina2.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
