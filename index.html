@@ -35,6 +35,7 @@
                     </div>
                     <button class="botao" onmouseover="revelarFoto()">Aperte aqui</button>
                 `;
+                document.querySelector('form').style.display = 'none';
             } else {
                 document.getElementById('resultado').innerHTML = 'Resposta incorreta!';
             }
@@ -43,6 +44,7 @@
         function revelarFoto() {
             document.querySelector('.fundo-branco').style.display = 'none';
             document.querySelector('.mensagem').style.display = 'block';
+            document.querySelector('.botao').style.display = 'none';
         }
     </script>
 </body>
